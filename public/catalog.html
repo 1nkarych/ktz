@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Train Schedule & Tickets - KTZ</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<header class="header">
+  <div class="container header-flex">
+    <div class="logo-area">
+      <span>ҚТЖ</span>
+      <span>Kazakhstan Temir Zholy</span>
+    </div>
+    
+    <nav>
+      <ul class="nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="catalog.html" class="active">Timetable & Tickets</a></li>
+        <li><a href="contact.html">Help & Contacts</a></li>
+        <li><a href="auth.html" id="auth-link">Login</a></li>
+        <li><a href="profile.html" id="profile-link" style="display:none;">My Tickets</a></li>
+        <li><a href="#" id="logout-btn" style="display:none;">Logout</a></li>
+      </ul>
+    </nav>
+    <div class="theme-toggle">
+      <button id="theme-switcher">🌙</button>
+    </div>
+    <div class="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+  <video autoplay muted loop playsinline id="bg-video">
+    <source src="images/video/bgvideo.mp4" type="video/mp4">
+  </video>
+</header>
+
+<main class="container">
+  
+  <section class="catalog-header">
+    <h1>Find Train Tickets</h1>
+    <p>Fast and secure railway connections across Kazakhstan</p>
+  </section>
+
+  <section class="search-section">
+    <div class="search-bar">
+      <div class="form-group">
+        <label for="station-from-input">From (Откуда)</label>
+        <input type="text" id="station-from-input" placeholder="e.g., Astana">
+      </div>
+      
+      <div class="form-group">
+        <label for="station-to-input">To (Куда)</label>
+        <input type="text" id="station-to-input" placeholder="e.g., Almaty">
+      </div>
+
+      <div class="form-group">
+        <label for="departure-date">Departure Date</label>
+        <input type="date" id="departure-date">
+      </div>
+      
+      <button id="search-btn">🔍 Find Routes</button>
+    </div>
+
+    <div class="filters">
+      <div class="filter-group">
+        <label for="train-type-filter">Train Type: </label>
+        <select id="train-type-filter">
+          <option value="">All Trains</option>
+          <option value="Talgo">Talgo (High-Speed)</option>
+          <option value="Standard">Standard Obychnyi</option>
+          <option value="Electric">Prigorodnyi (Electric Intercity)</option>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <label for="carriage-filter">Comfort Class: </label>
+        <select id="carriage-filter">
+          <option value="">Any Class</option>
+          <option value="Coupe">Купе (Compartment)</option>
+          <option value="Platzkart">Плацкарт (Open Sleeper)</option>
+          <option value="Lux">Люкс (De Luxe)</option>
+        </select>
+      </div>
+    </div>
+  </section>
+
+  <section class="catalog-grid">
+    <div id="products-container">
+      
+      <!-- Sample Dynamic Card Template for JavaScript rendering -->
+      <div class="train-card">
+         <div class="train-info">
+            <h3>Train 010Т "Talgo"</h3>
+            <p>Astana Nurly Zhol → Almaty 2</p>
+         </div>
+         <div class="train-duration">
+            <span>19 hours 20 mins</span>
+            <small>Daily Route</small>
+         </div>
+         <div class="train-booking">
+            <span class="price-tag">From 14,500 KZT</span>
+            <button class="select-seats-btn">Select Seats</button>
+         </div>
+      </div>
+
+    </div>
+    <p id="no-results" style="display:none;">No available trains found for this route or date 😢</p>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <p>© 2026 Kazakhstan Temir Zholy Simulation Portal</p>
+  </div>
+</footer>
+
+<script src="js/auth.js"></script>
+<script src="js/catalog-search.js"></script>
+
+</body>
+</html>

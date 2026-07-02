@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kazakhstan Temir Zholy</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+(function() {
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+})();
+
+</script>
+</head>
+<body>
+<header class="header">
+   <div class="container header-flex">
+    <img src="images/logo.png" alt="Bijouterie Boutique Logo" style="width: 75px; height: 75px;">
+   <nav>
+      <ul class="nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="catalog.html">Timetable & Tickets</a></li>
+        <li><a href="contact.html">Contacts & Support</a></li>
+        <li><a href="auth.html" id="auth-link">Login</a></li>
+        <li><a href="profile.html" id="profile-link" style="display:none;">Profile</a></li>
+        <li><a href="#" id="logout-btn" style="display:none;">Logout</a></li>
+      </ul>
+    </nav>
+    <div class="theme-toggle">
+      <button id="theme-switcher">🌙</button>
+    </div>
+    <div class="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+  <video autoplay muted loop playsinline id="bg-video">
+    <source src="images/video/bgvideo.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</header>
+
+<main>
+ <section id="rollers" class="carousel-section1">
+  <h2>News</h2>
+  <div class="carousel-container">
+    <button class="carousel-arrow left" onclick="moveSlide(-1, 'carousel-track')">
+      &#10094;
+    </button>
+    <div class="carousel-track" id="carousel-track">
+      <div class="carousel-card">
+        <img src="images/Cl1.jpg" alt="Aurora Emerald Pendant">
+        <h5>5,000 children attended KTZ's festive event: Year-round care for the younger generation </h5>
+      </div>
+      <div class="carousel-card">
+        <img src="images/cl2.jpg" alt="Solara Gold Lariat">
+        <h5>KTZ opens a new 140-seat kindergarden in Jetisu region</h5>
+      </div>
+      <div class="carousel-card">
+        <img src="images/cl3.jpg" alt="Ethereal Blossom Necklace">
+        <h5>KTZ train conductors congratulate young passengers on International Children's Day</h5>
+    </div>
+    <button class="carousel-arrow right" onclick="moveSlide(1, 'carousel-track')">
+      &#10095;
+    </button>
+  </div>
+  <div class="carousel-indicators" id="carousel-indicators"></div>
+</section>
+<section class="aboutus-section">
+  <div class="aboutus-container">
+    <div class="aboutus-text">
+      <h1>About KTZ</h1>
+      <p>
+JSC “NC“ KTZ ”: A Brief History & Profile<BR>
+
+Infrastructure Backbone:** Originating from early 20th-century lines like the 1904 Orenburg-Tashkent highway, railways have grown into Kazakhstan's vital socio-economic backbone.<br>
+National Impact:** Today, the railway network employs approximately 1% of the country’s population, sustaining multi-generational worker dynasties and connecting all domestic regions to international trade.<br>
+Network Expansion:** Throughout the 20th century, critical developments like the Turkestan-Siberian (Turksib) railway and 1960s electrification projects vastly expanded the nation's transit capacity.<br>
+Global Integration:** Major modern milestones include joining networks with China at the Druzhba-Alashankou crossing in 1990 and establishing the international "Uzen-Bereket-Gorgan" corridor in 2014.<br>
+Modern Evolution:** Officially established as a national corporation in 2002, JSC “NC“ KTZ ” has successfully transitioned from a traditional railway operator into a premier transport and logistics holding.<br>
+Strategic Vision:** The holding now drives Kazakhstan's transit potential by integrating global infrastructure and executing key state initiatives like the "Nurly Zhol" program.
+      </p>
+    </div>
+
+    <div class="aboutus-image">
+      <img src="images/about-us.jpg" alt="MAIA Jewelry Workshop">
+    </div>
+  </div>
+</section>
+
+<section id="services" class="promo-banner">
+  <div class="promo-content">
+    <h1>Save 20%<br>on tickets</h1>
+    <p>Offer valid until the end of the month</p>
+    <a href="contact.html" class="promo-button">Message us</a>
+  </div>
+</section>
+
+<section id="reviews" class="reviews-section1">
+  <h2>Customer Reviews</h2>
+    <div class="reviews-track" id="reviews-track">
+      <div class="reviews-card">
+        <h3>Saken Zharkynbek</h3>
+        <p>"JSC 'NC 'KTZ' stands as a premier Eurasian transport powerhouse, offering highly reliable multimodal freight shipping across vital trade corridors connecting China, Central Asia, and Europe."</p>
+      </div>
+      <div class="reviews-card">
+        <h3>Assel Sattar</h3>
+        <p>"KTZ's customer service is exceptional. They went above and beyond to ensure our shipment arrived on time."</p>
+      </div>
+      <div class="reviews-card">
+        <h3>Arailym Ussengeldi</h3>
+        <p>"The efficiency and reliability of KTZ's logistics services have been instrumental in our supply chain operations."</p>
+      </div>
+    </div>
+</section>
+
+<section id="contacts" class="questions-banner">
+  <div class="questions-content">
+    <h1>Have any questions?</h1>
+    <p>Leave a request! Our manager will contact you with a tailored offer.</p>
+    <a href="contact.html" class="questions-button">Contact Us</a>
+  </div>
+</section>
+</main>
+
+<section id="location" class="container" style="padding: 60px 0;">
+    <h2 style="text-align: center; margin-bottom: 30px;">Our Location</h2>
+    <div id="map" style="width: 100%; height: 450px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);"></div>
+</section>
+<footer class="footer">
+  <div class="footer-container container">
+    <div class="footer-logo">
+      <img src="images/logo.png" alt="Bijouterie Boutique Logo" class="footer-logo-img">
+      <p class="footer-brand">Kazakhstan railways</p>
+      <small>Since 2007</small>
+    </div>
+
+    <div class="footer-links">
+      <h6>QUICK LINKS</h6>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="catalog.html">Timetable&Tickets</a></li>
+        <li><a href="index.html#reviews">Reviews</a></li>
+        <li><a href="contact.html">Contacts</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-subscribe">
+      <h6>NEWSLETTER</h6>
+      <form id="footer-newsletter" class="newsletter-form">
+        <input type="email" placeholder="Your email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+      <div class="footer-contacts">
+      <h6>CONTACTS</h6>
+      <div class="footer-contacts-content">
+        <div class="footer-contacts-left">
+          <p>Kazakhstan, Astana, Konayev 6</p>
+          <p>Mon — Sat 10:00–20:00</p>
+        </div>
+        <div class="footer-contacts-right">
+          <p><strong>+7 700 000 00 00</strong></p>
+          <p><strong>+7 701 111 11 11</strong></p>
+          <p><strong>+7 708 494 54 09</strong></p>
+        </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>Developed by <strong>A. Inkar</strong></p>
+  </div>
+</footer>
+<script src="js/script.js"></script>
+<script src="js/theme.js"></script>
+<script src="js/auth.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCqA2efZL6-H_c4zAi_pWaNIZvr8QldI2o&callback=initMap" async defer></script>
+
+<script>
+    async function loadGoogleMaps() {
+        try {
+            const response = await fetch('http://localhost:3000/api/config/google-maps');
+            const data = await response.json();
+            const apiKey = data.key;
+
+
+            const script = document.createElement('script');
+            script.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}&callback=initMap`;
+            script.async = true;
+            script.defer = true;
+            document.head.appendChild(script);
+        } catch (err) {
+            console.error("Could not load Google Maps API key:", err);
+        }
+    }
+
+ 
+    function initMap() {
+        const location = { lat: 51.169392, lng: 71.449074 };
+        const map = new google.maps.Map(document.getElementById("map"), {
+            zoom: 16,
+            center: location,
+        });
+        new google.maps.Marker({
+            position: location,
+            map: map,
+            title: "MAIA Bijouterie"
+        });
+    }
+
+
+    window.onload = loadGoogleMaps;
+</script>
+</body>
+</html>
